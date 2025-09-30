@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table for 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .table {
+      background-color: #d42020;
+      padding: 10px;
+      border: 1px solid #7319e1;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Multiplication Table for 5</h2>
+  <div class="table" id="output"></div>
+
+  <script>
+    let text = "";
+    for (let i = 1; i <= 10; i++) {
+      text += "5 × " + i + " = " + (5 * i) + "<br>";
+    }
+    document.getElementById("output").innerHTML = text;
+  </script>
+
+</body>
+</html>

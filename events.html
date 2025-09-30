@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Event Handlers Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      width: 200px;
+      height: 50px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .dropzone {
+      width: 200px;
+      height: 100px;
+      border: 2px dashed rgb(215, 11, 11);
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+    <p>JavaScript Event Handlers</p>
+    <p style="color: green;">If you see this, the page is working!</p>
+
+  <h2>1. onclick</h2>
+  <button onclick="alert('You clicked the button!')">Click Me</button>
+
+  <h2>2. onsubmit</h2>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter name" required>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h2>3. onmouseout</h2>
+  <div class="box" 
+       onmouseover="this.style.backgroundColor='lightblue'" 
+       onmouseout="this.style.backgroundColor='white'">
+    Hover over me
+  </div>
+
+  <h2>4. ondragover</h2>
+  <div class="dropzone" ondragover="event.preventDefault()">
+    Drag something over me
+  </div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      if (name === "") {
+        alert("Name cannot be empty!");
+        return false;
+      }
+      alert("Form submitted!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
